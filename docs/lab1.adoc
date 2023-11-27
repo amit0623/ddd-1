@@ -18,7 +18,9 @@ We'll complete 18 stories:
 . When an assembler finishes assembling a `KitchenOrder`, its status becomes `ASSEMBLED`.
 . Only an `ASSEMBLING` `KitchenOrder` can finish assembly.
 . When a `Pizza` is created, its status is `NEW`.
-. When a cook starts preparing a `Pizza`, its status becomes `PREPPING`.
+if(!isNew())
+            throw new IllegalStateException();
+        this.state = State.BAKING;. When a cook starts preparing a `Pizza`, its status becomes `PREPPING`.
 . Only a `NEW` `Pizza` can begin prepping.
 . When a cook finishes preparing a `Pizza`, its status becomes `PREPPED`.
 . Only a `PREPPING` `Pizza` can finish prepping.
